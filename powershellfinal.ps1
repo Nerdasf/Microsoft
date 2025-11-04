@@ -84,7 +84,7 @@ if (-not $args) {
     }
 
     # Verify script integrity
-    $releaseHash = '3EB83D14683067DED3D081EC4A86D11478046A54C7320D6AE9C6BF89EC774BE5'
+    $releaseHash = '3CC519FC5E1A5663B9FCA4D853887C9F607A8199013C4351CF572B6176D15536'
     $stream = New-Object IO.MemoryStream
     $writer = New-Object IO.StreamWriter $stream
     $writer.Write($response)
@@ -132,4 +132,5 @@ if (-not $args) {
 
     $FilePaths = @("$env:SystemRoot\Temp\MAS*.cmd", "$env:USERPROFILE\AppData\Local\Temp\MAS*.cmd")
     foreach ($FilePath in $FilePaths) { Get-Item $FilePath -ErrorAction SilentlyContinue | Remove-Item }
+
 } @args
